@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware & Product Engineering Services</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --surface-color: #f8fafc;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --accent-color: #0284c7;
+            --accent-hover: #0369a1;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header / Hero Section */
+        header {
+            padding: 80px 0 60px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: var(--accent-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin-bottom: 32px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Section Layout */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .section-desc {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-size: 1.05rem;
+        }
+
+        /* Grid & Cards */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 700;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Highlight Banner for Additional Support */
+        .highlight-box {
+            margin-top: 24px;
+            padding: 20px 24px;
+            background-color: #f0f9ff;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 4px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* Tags / Pills for Tools & Chipsets */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tag {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tag-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--surface-color);
+            border-top: 1px solid var(--border-color);
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            header {
+                padding: 50px 0 40px;
+            }
+            section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header>
+            <span class="badge">End-to-End Hardware Engineering</span>
+            <h1>Do you have an Idea?<br>I can make it as a product.</h1>
+            <p class="subtitle">From initial concept and schematics to full PCB layout, simulation, and mechanical enclosure design—turning your vision into a manufacturable reality.</p>
+            <a href="#projects" class="cta-button">View Completed Projects</a>
+        </header>
+
+        <!-- Workflow / Services Section -->
+        <section id="services">
+            <h2>I can convert your Idea to</h2>
+            <p class="section-desc">A structured, production-ready hardware development pipeline.</p>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-title"><span class="step-number">1</span> Concept</div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">System architecture, block diagrams, and feasibility planning.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="step-number">2</span> Schematics</div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Detailed circuit design, component selection, and netlist verification.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="step-number">3</span> PCB Layout</div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Multi-layer routing, impedance control, and DFM optimization.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="step-number">4</span> Bill of Materials</div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Cost-optimized sourcing, lifecycle checks, and alternate part selection.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="step-number">5</span> Signal & Power Integrity</div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">SI/PI analysis to ensure reliable high-speed and power delivery performance.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="step-number">6</span> Mechanical Enclosure (ID)</div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">3D industrial design, thermal fitment, and enclosure modeling.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>+ End-to-End Execution:</strong> I can also provide dedicated support for <strong>firmware development</strong> and <strong>product testing</strong> to bring your hardware to life.
+            </div>
+        </section>
+
+        <!-- Tools & Software Section -->
+        <section id="tools">
+            <h2>Tools & Software Familiarity</h2>
+            <p class="section-desc">Industry-standard EDA, simulation, and mechanical CAD suites.</p>
+            
+            <div class="tag-container">
+                <div class="tag"><span class="tag-dot"></span> Cadence Allegro</div>
+                <div class="tag"><span class="tag-dot"></span> Altium Designer</div>
+                <div class="tag"><span class="tag-dot"></span> KiCad</div>
+                <div class="tag"><span class="tag-dot"></span> HyperLynx</div>
+                <div class="tag"><span class="tag-dot"></span> SolidWorks</div>
+                <div class="tag"><span class="tag-dot"></span> FreeCAD</div>
+            </div>
+        </section>
+
+        <!-- Chipsets & Architecture Experience -->
+        <section id="chipsets">
+            <h2>Chipsets & Subsystems Worked With</h2>
+            <p class="section-desc">Hands-on integration experience across power, processing, connectivity, and interface domains.</p>
+            
+            <div class="tag-container">
+                <div class="tag">1. Arduino</div>
+                <div class="tag">2. Switching Regulators</div>
+                <div class="tag">3. Audio Codecs & Amplifiers</div>
+                <div class="tag">4. LED Drivers</div>
+                <div class="tag">5. Protection Circuits</div>
+                <div class="tag">6. DDR Memory Devices</div>
+                <div class="tag">7. System on Chip (SoC)</div>
+                <div class="tag">8. Ethernet PHY</div>
+                <div class="tag">9. Microcontrollers</div>
+                <div class="tag">10. Serializers / Deserializers (SerDes) & more</div>
+            </div>
+        </section>
+
+        <!-- Completed Projects Section -->
+        <section id="projects">
+            <h2>Projects Done</h2>
+            <p class="section-desc">Proven track record of delivering cost-effective, high-performance hardware solutions.</p>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title">01. Ultra-Low-Cost Buck Converter</div>
+                    <p style="color: var(--text-secondary);">5V to 3.3V, 2A switching buck converter engineered with a total BOM cost under $1 USD.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">02. Smart IoT Integrated Wall Socket</div>
+                    <p style="color: var(--text-secondary);">Connected AC power control and monitoring integrated into a compact wall-mount form factor.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">03. 65W USB PD Charger</div>
+                    <p style="color: var(--text-secondary);">High-efficiency USB Power Delivery fast charger with comprehensive thermal and electrical protection.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">04. 15W Bluetooth Speaker</div>
+                    <p style="color: var(--text-secondary);">Complete audio pipeline combining wireless connectivity, audio codec/amplification, and acoustic enclosure.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">05. IP Camera (CCTV Camera)</div>
+                    <p style="color: var(--text-secondary);">Networked surveillance hardware featuring SoC video processing, Ethernet PHY, and IR LED driver circuitry.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Ready to turn your hardware concept into a manufacturable product? Get in touch to discuss your specifications.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
